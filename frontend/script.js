@@ -88,7 +88,7 @@ function displayTodos(todos){
         checkbox.checked = todo.comp
 
         checkbox.addEventListener("change",()=>{
-            updateTodo(todo.id,todo.desc,checkbox.checked)
+            updateTodo(todo._id,todo.desc,checkbox.checked)
         })
 
         const btnWrapper = document.createElement("div")
@@ -102,7 +102,7 @@ function displayTodos(todos){
             const newText = prompt("Edit todo",todo.desc)
 
             if(newText){
-                updateTodo(todo.id,newText,todo.comp)
+                updateTodo(todo._id,newText,todo.comp)
             }
 
         })
@@ -112,7 +112,7 @@ function displayTodos(todos){
         deleteBtn.textContent = "Delete"
 
         deleteBtn.addEventListener("click",()=>{
-            deleteTodo(todo.id)
+            deleteTodo(todo._id)
         })
 
 
